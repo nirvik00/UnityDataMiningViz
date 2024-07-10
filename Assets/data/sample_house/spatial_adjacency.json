@@ -1,0 +1,52 @@
+{
+	"Master Bedroom 206-857191": [
+		"Master Bath 207-857194",
+		"Entry Hall 201-857209"
+	],
+	"Master Bath 207-857194": ["Master Bedroom 206-857191"],
+	"Bedroom 204-857197": [
+		"Bath 205-857203",
+		"Entry Hall 201-857209",
+		"Entry Hall 201-857209",
+		"Linen 208-940325"
+	],
+	"Bath 203-857200": ["Bedroom 202-857206"],
+	"Bath 205-857203": ["Bedroom 204-857197"],
+	"Bedroom 202-857206": [
+		"Bath 203-857200",
+		"Entry Hall 201-857209",
+		"Entry Hall 201-857209",
+		"Linen 208-940325"
+	],
+	"Entry Hall 201-857209": [
+		"Master Bedroom 206-857191",
+		"Bedroom 204-857197",
+		"Bedroom 204-857197",
+		"Bedroom 202-857206",
+		"Bedroom 202-857206",
+		"Linen 208-940325",
+		"Linen 208-940325"
+	],
+	"Kitchen & Dining 101-857279": [
+		"Mech. 102-906922",
+		"Hall 105-857545",
+		"Hall 105-857545"
+	],
+	"Laundry 104-857292": ["Bath 103-857346"],
+	"Bath 103-857346": ["Laundry 104-857292", "Hall 105-857545"],
+	"Hall 105-857545": [
+		"Bath 103-857346",
+		"Living 106-857552",
+		"Kitchen & Dining 101-857279",
+		"Kitchen & Dining 101-857279",
+		"Living 106-857552"
+	],
+	"Living 106-857552": ["Hall 105-857545", "Hall 105-857545"],
+	"Mech. 102-906922": ["Kitchen & Dining 101-857279"],
+	"Linen 208-940325": [
+		"Bedroom 204-857197",
+		"Bedroom 202-857206",
+		"Entry Hall 201-857209",
+		"Entry Hall 201-857209"
+	]
+}
