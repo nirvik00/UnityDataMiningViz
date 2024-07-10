@@ -6,7 +6,7 @@ public class TestManager : MonoBehaviour
 {
     void Start()
     {
-        Test();
+        // Test();
     }
 
     void Update()
