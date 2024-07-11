@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabNode: {fileID: 8398673878627391837, guid: e62623cda87cffd49ae1e7f20203e59c, type: 3}
+  prefabNodeInfo: {fileID: 936555213707800547, guid: c7ec8e15b6c237e41a4f90998c8b628a, type: 3}
   prefabNodeLi: []
 --- !u!114 &374346602
 MonoBehaviour:
@@ -1010,6 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabNode: {fileID: 0}
+  prefabNodeInfo: {fileID: 0}
   prefabNodeLi: []
 --- !u!1 &1209523705
 GameObject:
