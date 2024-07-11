@@ -4,14 +4,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceObjSingleton : MonoBehaviour
 {
+    [SerializeField]
+    private string Filepath;
     public static SpaceObjSingleton Instance { get; private set; }
 
     public List<SpaceObj> SpaceObjLi;
 
-    private void Awake()
+    string FilePath = @"C:\Users\nsdev\UnityProjects\test3d\Assets\data\185171_biocontainment\SpaceEquipmentData_185171_biocontainment_research_facility.json";
+
+    private void Awake(){
+        ProcessJsonFile();
+    }
+
+    public void ProcessJsonFile()
     {
         if (Instance != null && Instance != this)
         {
@@ -25,9 +34,12 @@ public class SpaceObjSingleton : MonoBehaviour
         SpaceObjLi = new List<SpaceObj>();
 
 
-        string jsonStr = File.ReadAllText(".\\Assets\\data\\185171_biocontainment\\SpaceEquipmentData_185171_biocontainment_research_facility.json");
+        // string jsonStr = File.ReadAllText(".\\Assets\\data\\185171_biocontainment\\SpaceEquipmentData_185171_biocontainment_research_facility.json");
 
         // string jsonStr= File.ReadAllText(".\\Assets\\data\\sample_house\\SpaceEquipmentData_SampleHouse.json");
+
+
+        string jsonStr = File.ReadAllText(FilePath);
 
         ListOfSpaceRoom SpaceRooms = JsonUtility.FromJson<ListOfSpaceRoom>(jsonStr);
 
@@ -111,11 +123,6 @@ public class SpaceObjSingleton : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
     private List<Vector3> GetCoordinates(string coordStr)
     {
         List<Vector3> polyPts = new List<Vector3>();
@@ -130,12 +137,6 @@ public class SpaceObjSingleton : MonoBehaviour
             polyPts.Add(v);
         }
         return polyPts;
-    }
-
-
-    void Update()
-    {
-
     }
 }
 

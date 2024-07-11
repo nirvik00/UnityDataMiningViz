@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class UIHandler : MonoBehaviour
 
     [SerializeField]
     private SpacesStats stats;
+
 
     private void Awake()
     {
@@ -35,4 +37,7 @@ public class UIHandler : MonoBehaviour
         DataTMP.text = s2;
     }
 
+    public void ProcessJsonFileFromSingleton(){
+        SpaceObjSingleton.Instance.ProcessJsonFile();
+    }
 }

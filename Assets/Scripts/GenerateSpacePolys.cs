@@ -1,19 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class ParseJsonGenerateSpaces : MonoBehaviour
+public class GenerateSpacePolys : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject polyPrefab;
 
     [SerializeField]
     private SpacesStats stats;
+
+    [SerializeField]
+    private GameObject SpacePolysParent;
 
     List<GameObject> polyPrefabLi;
 
@@ -53,14 +51,11 @@ public class ParseJsonGenerateSpaces : MonoBehaviour
         }
         polyRenderer.loop = true;
         polyPrefabLi.Add(poly);
+        poly.transform.parent = SpacePolysParent.transform;
     }
 
     public List<GameObject> GetPolyPrefabLi()
     {
         return polyPrefabLi;
     }
-
 }
-
-
-
